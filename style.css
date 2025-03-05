@@ -1,0 +1,56 @@
+.body{font-family: "Manrope", sans-serif;}
+nav{letter-spacing: 0.7px;}
+.links{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 999;
+}
+.lang_selection img{
+    width: 25px;
+    height: 15px;
+}
+.option{border: 1px solid gray;}
+.login_btn{border: 1px solid #732CE3;}
+.teklif_btn{background: linear-gradient(90deg, rgba(121,53,227,1) 49%, rgba(189,164,230,1) 94%);}
+.vewsites{
+    border: 1px solid gray;
+    left: 0;
+    z-index: 100;
+}
+.vewsites img{
+    display: none;
+}
+
+
+@media (min-width:1024px){
+    /*<<---NAVIGATION--->>**/
+    nav .fa-bars{display: none;}
+    .parent_div{justify-content: space-between;}
+    .links{
+        position: static;
+        padding: 0;
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        box-shadow: none;
+        height: initial;
+    }
+    .navlinks{
+        flex-direction: row;
+        margin: 0;
+        align-items: center;
+    }
+    .right_links{
+        display: flex;
+        align-items: center;
+    }
+    #valuta{margin: 0;}
+    .nav_btns{
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+    }
+    nav .fa-xmark{display: none;}
+    .vewsites img{display: initial;}
+
+}
