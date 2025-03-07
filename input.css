@@ -8,6 +8,7 @@ nav{letter-spacing: 0.7px;}
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 999;
 }
+.right_links{z-index: 998;}
 .lang_selection img{
     width: 25px;
     height: 15px;
@@ -23,15 +24,13 @@ nav{letter-spacing: 0.7px;}
 }
 .navlinks li ul img{display: none;}
 
-
 @media (min-width:1024px){
     /*<<---NAVIGATION--->>**/
     nav .fa-bars{display: none;}
-    .parent_div{justify-content: space-between;}
     .links{
         position: static;
         padding: 0;
-        width: 1000px;
+        width: inherit;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -43,6 +42,7 @@ nav{letter-spacing: 0.7px;}
         margin: 0;
         align-items: center;
     }
+    .navlinks li:hover{color: #A271F2;}
     .right_links{
         display: flex;
         align-items: center;

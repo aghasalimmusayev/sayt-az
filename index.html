@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,140 +15,62 @@
 
 <body>
 
-    <nav class="px-10 py-5 relative ">
-        <div class="parent_div w-full flex justify-between items-center">
+    <nav class="px-10 py-4 relative ">
+        <div class="parent_div flex justify-between items-center">
             <a class="logo" href="#"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
             <div class="links absolute top-0 right-0 p-10 h-screen w-2/3 hidden">
                 <i class="fa-solid fa-xmark text-2xl cursor-pointer p-1 absolute top-[25px] right-10"
                     onclick="closeBar()"></i>
-                <ul class="navlinks flex flex-col gap-3 my-5">
-                    <li class="cursor-pointer text-[#300B60] font-manrope font-bold relative hover:bg-slate-50" onclick="">Veb site
+                <ul class="navlinks flex flex-col lg:gap-3 my-5">
+                    <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative" onclick="">Veb site
                         <i class="fa-solid fa-chevron-down text-sm"></i>
-                        <ul class="bg-white rounded-xl hidden absolute -left-20 py-5 px-5">
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/saytlarin hazirlanmasi.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Saytlarin hazirlanmasi</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Veb saytlarin hazirlanmasi</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/hokumet-kommersiya.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Hokumet ve qeyri-kommersiya saytlari</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Hokumet ve qeyri-kommersiya saytlari</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/kicik_biznes.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Kicik biznes saytlari</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Kicik biznesler ucun saytlar</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/E-ticaret.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">E-ticaret saytlari</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">E-ticaret saytlari</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/huquq-firma.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Huquq firma sayti</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Huquq firma sayti</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/bloglar.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Bloqlar ve Sexsi Vebsayt</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Bloqlar ve Sexsi Vebsayt</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/dasinmaz-emlak.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Dasinmaz emlak veb sayti</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Dasinmaz emlak veb sayti</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/tibb-doctor.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">Tibb - Doctor veb Saytlar</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">Tibb Doctor Saytlar</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="py-1 px-5 hover:bg-slate-50">
-                                <a href="#" class="flex items-center">
-                                    <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="img/word-press.svg" alt="link_img">
-                                    <div class="li_text">
-                                        <p class="text-slate-700 font-medium text-base lg:w-max">WordPress Saytlari</p>
-                                        <span class="text-slate-500 md:text-sm text-xs lg:w-max md:max-w-[400px] max-w-[320px] md:line-clamp-2">WordPress Saytlari</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul class="vebsayt_list bg-white rounded-lg hidden absolute -left-20 py-5"></ul>
                     </li>
-                    <li class="cursor-pointer text-[#300B60] font-manrope font-bold relative hover:bg-slate-50">Domen
+                    <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative">Domen
                         <i class="fa-solid fa-chevron-down text-sm"></i>
+                        <ul class="domen_list bg-white rounded-lg hidden absolute -left-20 py-5"></ul>
                     </li>
-                    <li class="cursor-pointer text-[#300B60] font-manrope font-bold relative hover:bg-slate-50">Hostinq
+                    <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative">Hostinq
                         <i class="fa-solid fa-chevron-down text-sm"></i>
+                        <ul class="hosting_list bg-white rounded-lg hidden absolute -left-20 py-5"></ul>
                     </li>
-                    <li class="cursor-pointer text-[#300B60] font-manrope font-bold relative hover:bg-slate-50">Xidmətlər
+                    <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative">Xidmətlər
                         <i class="fa-solid fa-chevron-down text-sm"></i>
+                        <ul class="xidmet_list bg-white rounded-lg hidden absolute -left-20 py-5"></ul>
                     </li>
-                    <li class="cursor-pointer text-[#300B60] font-manrope font-bold relative hover:bg-slate-50">Şirkət
+                    <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative">Şirkət
                         <i class="fa-solid fa-chevron-down text-sm"></i>
+                        <ul class="sirket_list bg-white rounded-lg hidden absolute -left-20 py-5"></ul>
                     </li>
                 </ul>
-                <div class="right_links">
-                    <div class="flex items-center gap-5">
-                        <select id="valuta" class="w-[40px] my-3 font-bold text-xl text-[#300B60]">
-                            <option class="text-[#300B60] font-bold" value="manat">$</option>
-                            <option class="text-[#300B60] font-bold" value="dollar">₼</option>
-                        </select>
-                        <div class="lang_selection relative">
-                            <div class="selected flex gap-1 cursor-pointer w-[55px] p-2">
+            </div>
+            <div class="right_links absolute lg:static top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit hidden">
+                <div class="flex items-center gap-5">
+                    <select id="valuta" class="cursor-pointer w-[40px] my-3 font-bold text-xl text-[#300B60]">
+                        <option class="text-[#300B60] font-bold" value="manat">$</option>
+                        <option class="text-[#300B60] font-bold" value="dollar">₼</option>
+                    </select>
+                    <div class="lang_selection relative">
+                        <div class="selected flex gap-1 cursor-pointer w-[55px] p-2">
+                            <img src="img/Flag_of_Azerbaijan.png" alt="Azerbaijan Flag">
+                            <i class="fa-solid fa-chevron-down text-xs px-1"></i>
+                        </div>
+                        <div class="options absolute top-full">
+                            <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="az">
                                 <img src="img/Flag_of_Azerbaijan.png" alt="Azerbaijan Flag">
-                                <i class="fa-solid fa-chevron-down text-xs px-1"></i>
                             </div>
-                            <div class="options absolute top-full">
-                                <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="az">
-                                    <img src="img/Flag_of_Azerbaijan.png" alt="Azerbaijan Flag">
-                                </div>
-                                <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="en">
-                                    <img src="img/Flag_of_the_United_States.png" alt="USA Flag">
-                                </div>
+                            <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="en">
+                                <img src="img/Flag_of_the_United_States.png" alt="USA Flag">
                             </div>
                         </div>
                     </div>
-                    <div class="nav_btns flex flex-col gap-5 my-3">
-                        <button
-                            class="teklif_btn text-white font-bold sm:w-full md:w-[200px] rounded-md px-5 py-2 border-none">
-                            Qiymət Təklifi Al</button>
-                        <button class="login_btn text-[#732CE3] font-bold sm:w-full md:w-[130px] rounded-md px-5 py-2">
-                            Daxil olun</button>
-                    </div>
+                </div>
+                <div class="nav_btns flex flex-col gap-5 my-3">
+                    <button
+                        class="teklif_btn text-white font-bold w-full md:w-[200px] rounded-md px-5 py-2 border-none">
+                        Qiymət Təklifi Al</button>
+                    <button class="login_btn text-[#732CE3] font-bold w-full md:w-[130px] rounded-md px-5 py-2">
+                        Daxil olun</button>
                 </div>
             </div>
             <div><i class="fa-solid fa-bars cursor-pointer text-xl p-1" onclick="openBar()"></i></div>
