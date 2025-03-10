@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.container{
+    width: 90%;
+    margin: auto;
+}
 .body{font-family: "Manrope", sans-serif;}
 nav{letter-spacing: 0.7px;}
-.links{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    z-index: 999;
-}
-.right_links{z-index: 998;}
+.links{box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}
 .lang_selection img{
     width: 25px;
     height: 15px;
@@ -23,36 +23,23 @@ nav{letter-spacing: 0.7px;}
     z-index: 100;
 }
 .navlinks li ul img{display: none;}
+.header_content h1{line-height: 60px;}
+.three_cards div{box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+.sfr_izle{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
 
 @media (min-width:1024px){
     /*<<---NAVIGATION--->>**/
     nav .fa-bars{display: none;}
     .links{
-        position: static;
-        padding: 0;
         width: inherit;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
         box-shadow: none;
         height: initial;
     }
-    .navlinks{
-        flex-direction: row;
-        margin: 0;
-        align-items: center;
-    }
     .navlinks li:hover{color: #A271F2;}
-    .right_links{
-        display: flex;
-        align-items: center;
-    }
-    #valuta{margin: 0;}
-    .nav_btns{
-        flex-direction: row;
-        align-items: center;
-        margin-left: 20px;
-    }
     nav .fa-xmark{display: none;}
     .navlinks li ul img{display: initial;}
+    .container{width: 1250px;}
+    .header_content h1{line-height: 80px;}
+
 }
+
