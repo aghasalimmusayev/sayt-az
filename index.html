@@ -16,7 +16,7 @@
 <body>
 
     <div class="navigation fixed w-full">
-        <nav class="px-10 py-4 relative bg-white z-[1000] mx-auto">
+        <nav class="px-10 py-4 relative bg-white mx-auto">
             <div class="parent_div flex justify-between items-center">
                 <a class="logo" href="#"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
                 <div
@@ -47,9 +47,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="right_links absolute hidden z-30 lg:static lg:flex lg:items-center top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit">
+                <div
+                    class="right_links absolute hidden z-30 lg:static lg:flex lg:items-center top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit">
                     <div class="flex items-center gap-5">
-                        <select id="valuta" class="cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
+                        <select id="valuta"
+                            class="cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
                             <option class="text-[#300B60] font-bold" value="manat">$</option>
                             <option class="text-[#300B60] font-bold" value="dollar">₼</option>
                         </select>
@@ -84,11 +86,14 @@
     <header>
         <div class="container">
             <div class="header_content h-fit pb-10 pt-[100px] flex flex-col items-center justify-center gap-8">
-                <h1 class="text-center tracking-wide lg:px-10 lg:w-[800px] text-2xl md:text-3xl lg:text-5xl font-medium">
+                <h1
+                    class="text-center tracking-wide lg:px-10 lg:w-[800px] text-2xl md:text-3xl lg:text-5xl font-medium">
                     Biznesinizi bizimlə rəqəmsal dünyada
                     <span class="sm:mx-4 md:mx-6 text-blue-600 relative lg:mx-[30px] text-5">daha asan
-                        <div class="w-[135px] md:w-[165px] lg:w-[185px] h-[120px] absolute z-0 top-[-12px] md:top-[-12px] lg:top-[-10px] left-[-10px] md:left-[-10px]">
-                        <img class="w-full" src="img/daha asan.svg" alt=""></div>
+                        <div
+                            class="w-[135px] md:w-[165px] lg:w-[185px] h-[120px] absolute top-[-12px] md:top-[-12px] lg:top-[-10px] left-[-10px] md:left-[-10px]">
+                            <img class="w-full" src="img/daha asan.svg" alt="">
+                        </div>
                     </span>yoldan irəliyə apar!
                 </h1>
                 <p class="text-center text-base md:text-lg lg:text-xl font-normal text-slate-500 lg:w-[500px]">
@@ -187,26 +192,149 @@
             </section>
         </div>
 
+        <div class="bg_domen bg-[#FAF4FF]">
+            <div class="container">
+                <section id="domenSearch" class="py-16">
+                    <div class="domen_context flex flex-col gap-5 items-center">
+                        <h4
+                            class="sm:text-[22px] md:text-[32px] tracking-[0.1px] text-center font-medium text-[#300B60]">
+                            Domen Adını Axtarın</h4>
+                        <p
+                            class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
+                            .az domain sifariş etməmişdən öncə <span class="font-bold">whois.az</span> saytında yoxlayın
+                        </p>
+                        <p
+                            class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
+                            Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır.
+                            Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.
+                            <a class="font-bold" href="#">Ətraflı oxu...</a>
+                        </p>
+                        <form action="POST" class="flex">
+                            <div
+                                class="inp_box bg-white max-w-[800px] flex justify-center items-center border border-gray-300 border-r-0 rounded-md py-2 px-3">
+                                <input type="text"
+                                    class="w-full pr-3 text-black outline-none placeholder:text-slate-400"
+                                    placeholder="İstədiyiniz domen adını daxil edin">
+                                <select id="domenName" class="text-slate-500 outline-none"></select>
+                            </div>
+                            <button
+                                class="domen_btn bg-[#A271F2] hover:bg-[#51258b] active:bg-[#300B60] px-6 text-white rounded-[4px]">Axtar</button>
+                        </form>
+                        <p class="domen_filling_info text-base text-[#300B60]"></p>
+                        <div class="domen_example sm:grid sm:grid-cols-3 md:flex gap-10 mt-8"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
         <div class="container">
-            <section id="domenSearch" class="py-16">
-                <div class="domen_context flex flex-col gap-5 items-center">
-                    <h4 class="sm:text-[22px] md:text-[32px] tracking-[0.1px] text-center font-medium text-[#300B60]">
-                        Domen Adını Axtarın</h4>
-                    <p class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
-                        .az domain sifariş etməmişdən öncə <span class="font-bold">whois.az</span> saytında yoxlayın</p>
-                    <p class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
-                        Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır.
-                        Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.
-                        <a class="font-bold" href="#">Ətraflı oxu...</a>
-                    </p>
-                    <form action="POST">
-                        <input type="text" class="border-[2px] border-gray-400 mt-[1px] pr-3 text-black outline-none placeholder:text-slate-400 ">
-                        <select id="" class="bg-transparent border-0 border-l-[1px] text-slate-500 outline-none"></select>
-                        <button class="bg-[#A271F2] hover:bg-[#51258b] active:bg-[#300B60] px-6 text-white rounded-[4px]">Axtar</button>
-                    </form>
+            <section id="hostingPlan" class="py-16">
+                <div class="flex flex-col md:flex-row items-center px-4 mb-4">
+                    <div class="planHead lg:w-3/5 flex flex-col gap-5">
+                        <h2
+                            class="text-xl md:text-3xl lg:text-[42px] tracking-[0.1px] text-[#300B60] font-bold text-start">
+                            Hostinq Planınızı Seçin</h2>
+                        <h6 class="sm:text-xl text-base sm:tracking-[0.1px] sm:font-medium text-[#300B60] text-start">
+                            Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir</h6>
+                    </div>
+                    <div
+                        class="sm:w-fit sm:justify-between md:w-fit mt-4 md:justify-start  inline-flex border border-input-border rounded-3xl">
+                        <span
+                            class="sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] xs:text-base text-sm flex items-center ease-out justify-center rounded-3xl cursor-pointer bg-[#A271F2] text-white font-medium transition-colors duration-[500ms]">Aylıq</span>
+                        <span
+                            class="sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] xs:text-base text-sm flex items-center ease-out justify-center rounded-3xl cursor-pointer text-[#94A3B8] bg-white">İllik</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-0 gap-2">
+                    <div class="plan_card economic_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer hover:border-[#300B60] transition bg-[#FAFBFF]">
+                        <div class="mb-5">
+                            <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
+                            <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg">
+                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Ekonomik</h3>
+                            <ul class="mt-5 space-y-3 text-sm text-[#300B60]">
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">1</span> Domen</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">3
+                                        GB</span> Disk Həcmi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">3</span> E-mail Hesabi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Premium müştəri dəstəyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>SSL Təhlükəsizliyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Yedəkləmə və bərpa</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">Limitsiz</span> Trafik</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Təhlükəsizlik Xüsusiyyətləri
+                                </li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>cPanel</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>FTP Girişi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Fayl İdarəedici</li>
+                            </ul>
+                        </div>
+                        <button class="border border-[#A271F2] rounded-3xl text-sm font-semibold text-[#A271F2] text-center w-full py-2">Sifariş et</button>
+                    </div>
+                    <div class="plan_card selectedPlan standart_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer hover:border-[#300B60] transition bg-[#FAFBFF]">
+                        <div class="mb-5">
+                            <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
+                            <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg">
+                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Ekonomik</h3>
+                            <ul class="mt-5 space-y-3 text-sm text-[#300B60]">
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">1</span> Domen</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">3
+                                        GB</span> Disk Həcmi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">3</span> E-mail Hesabi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Premium müştəri dəstəyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>SSL Təhlükəsizliyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Yedəkləmə və bərpa</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">Limitsiz</span> Trafik</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Təhlükəsizlik Xüsusiyyətləri
+                                </li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>cPanel</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>FTP Girişi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Fayl İdarəedici</li>
+                            </ul>
+                        </div>
+                        <button class="border border-[#A271F2] rounded-3xl text-sm font-semibold text-[#A271F2] text-center w-full py-2">Sifariş et</button>
+                    </div>
+                    <div class="plan_card professional_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer hover:border-[#300B60] transition bg-[#FAFBFF]">
+                        <div class="mb-5">
+                            <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
+                            <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg">
+                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Ekonomik</h3>
+                            <ul class="mt-5 space-y-3 text-sm text-[#300B60]">
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">1</span> Domen</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">3
+                                        GB</span> Disk Həcmi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">3</span> E-mail Hesabi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Premium müştəri dəstəyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>SSL Təhlükəsizliyi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Yedəkləmə və bərpa</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
+                                        class="font-bold">Limitsiz</span> Trafik</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Təhlükəsizlik Xüsusiyyətləri
+                                </li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>cPanel</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>FTP Girişi</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Fayl İdarəedici</li>
+                            </ul>
+                        </div>
+                        <button class="border border-[#A271F2] rounded-3xl text-sm font-semibold text-[#A271F2] text-center w-full py-2">Sifariş et</button>
+                    </div>
                 </div>
             </section>
         </div>
+
+
 
     </main>
 

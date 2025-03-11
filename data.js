@@ -1,5 +1,5 @@
-let saytData = 
-    {navLinks: {
+let saytData = {
+    navLinks: {
         vebsite: [
             { name: "Saytlarin hazirlanmasi", tesvir: "Veb saytlarin hazirlanmasi"},
             { name: "Hokumet ve qeyri-kommersiya saytlari", tesvir: "Hokumet ve qeyri-kommersiya saytlari"},
@@ -36,5 +36,9 @@ let saytData =
             {name: "Karyera", tesvir: "Hazıkı vakansiyalarımız"},
             {name: "Freelance", tesvir: "Siz də qeydiyyatdan keçməklə freelance işləyə bilərsiz"},
             {name: "Əlaqə Forması", tesvir: "Əlaqə saxlayın"}
-        ]}
-    }
+        ]
+    },
+    domenSelect: [".az",".com",".net",".info",".biz",".org",".us",".in",".ws",".mobi",".tv",".me",
+                    ".ru",".de",".com.az",".co",".site.az",".sayt.az",".ureb.com",".org.az",
+                    ".info.az",".biz.az",".net.az"],
+};

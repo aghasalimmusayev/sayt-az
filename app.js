@@ -5,12 +5,17 @@ let domenList = document.querySelector(".domen_list");
 let hostingList = document.querySelector(".hosting_list");
 let xidmetList = document.querySelector(".xidmet_list");
 let sirketList = document.querySelector(".sirket_list");
+let domenName = document.querySelector("#domenName");
+let domenExample = document.querySelector(".domen_example");
+let domenFillingInfo = document.querySelector(".domen_filling_info");
 
 vebsaytShow();
 domenShow();
 hostingShow();
 xidmetShow();
 sirketShow();
+domenOption();
+domenNumune();
 
 options.style.display = "none"
 selected.onclick = function(){
@@ -146,4 +151,31 @@ function sirketShow(){
                 </a>
             </li>`
     })
+}
+function domenOption(){
+    saytData.domenSelect.forEach(item => {
+        domenName.innerHTML += `
+            <option value="${item}">${item}</option>`
+    })
+}
+function domenNumune(){
+    saytData.domenSelect
+    .slice(0, 6)
+    .forEach(item => {
+        domenExample.innerHTML += `
+        <div class="flex gap-5">
+            <div class="p-2 cursor-pointer border-none text-center" onclick="domenSec('${item}')">
+                <div class="text-[#A271F2] font-semibold text-2xl">${item}</div>
+                <div class="text-[#A271F2] font-semibold">$40/il</div>
+            </div>
+        </div>`
+    })
+}
+function domenSec(domen){
+    domenName.value = domen    
+    domenName.onchange();
+}
+domenName.onchange = function(){
+    domenFillingInfo.innerHTML = ""   
+    domenFillingInfo.innerHTML = "*Domen adı düzgün deyil.Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər"   
 }
