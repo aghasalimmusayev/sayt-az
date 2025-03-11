@@ -8,6 +8,7 @@ let sirketList = document.querySelector(".sirket_list");
 let domenName = document.querySelector("#domenName");
 let domenExample = document.querySelector(".domen_example");
 let domenFillingInfo = document.querySelector(".domen_filling_info");
+let planCards = document.querySelectorAll(".plan_card");
 
 vebsaytShow();
 domenShow();
@@ -179,3 +180,11 @@ domenName.onchange = function(){
     domenFillingInfo.innerHTML = ""   
     domenFillingInfo.innerHTML = "*Domen adı düzgün deyil.Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər"   
 }
+planCards.forEach(div => {
+    div.onclick = function(){
+        planCards.forEach(d => {
+            d.classList.remove("selectedPlan")
+        })
+        this.classList.add("selectedPlan")
+    }
+})

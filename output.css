@@ -1304,7 +1304,7 @@ nav{
 }
 
 .plan_card:hover{
-  border: 2px solid red;
+  border: 2px solid #A271F2;
 }
 
 .plan_card{
@@ -1319,11 +1319,6 @@ nav{
 .selectedPlan button{
   background-color: #A271F2;
   color: white;
-}
-
-.unSelectedPlan button{
-  background-color: transparent;
-  color: #A271F2;
 }
 
 @media (min-width:1024px){
@@ -1386,11 +1381,6 @@ nav{
 .placeholder\:text-slate-400::placeholder {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity, 1));
-}
-
-.hover\:border-\[\#300B60\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(48 11 96 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-\[\#51258b\]:hover {
