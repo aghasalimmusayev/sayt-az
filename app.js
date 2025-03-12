@@ -15,6 +15,14 @@ let ecoPlanPrice = document.querySelector(".economic_plan .plan_price");
 let standartPlanPrice = document.querySelector(".standart_plan .plan_price");
 let proPlanPrice = document.querySelector(".professional_plan .plan_price");
 let planPeriods = document.querySelectorAll(".plan_period");
+let isler = document.querySelector(".isler");
+let pagBtns = document.querySelectorAll(".pag_btn")
+let prevButton = document.querySelector("button[title='previous']");
+let nextButton = document.querySelector("button[title='next']");
+
+let start = 0
+let son = 6
+pagBtns[0].classList.add("bg-[#996BE4]", "text-white");
 
 vebsaytShow();
 domenShow();
@@ -23,6 +31,7 @@ xidmetShow();
 sirketShow();
 domenOption();
 domenNumune();
+showPortfolio();
 
 options.style.display = "none"
 selected.onclick = function(){
@@ -214,3 +223,46 @@ illikPlan.onclick = function(){
     standartPlanPrice.innerHTML = "$120"
     proPlanPrice.innerHTML = "$240"
 }
+function showPortfolio(){
+    isler.innerHTML = ""
+    saytData.portfolio
+    .slice(start, son)
+    .forEach(element => {
+        isler.innerHTML += 
+            `<div class="website bg-[#FAF4FF] w-full h-fit p-6 rounded-[30px] border-2 border-[#E4D7FD] cursor-pointer">
+                <img src="${element.img}" 
+                    alt="site sekli" class="site_img w-full h-[300px] md:h-[240px] lg:h-[320px] xl:h-[380px] object-cover rounded-[15px]">
+                <h4 class="site_name text-sm md:text-xl font-semibold text-[#300B60] mt-6">${element.name}</h4>
+            </div>`
+    })
+}
+pagBtns.forEach((pagButton, index) => {
+    pagButton.onclick = function() {
+        debugger
+        pagBtns.forEach(btn => {
+            btn.classList.remove("bg-[#996BE4]", "text-white");
+        });
+        this.classList.add("bg-[#996BE4]", "text-white");
+        start = index * 6;
+        son = Math.min((index + 1) * 6, saytData.portfolio.length);
+        currentPage = index + 1;
+        showPortfolio();
+    };
+});
+let currentPage = 1;
+prevButton.onclick = function() {
+    debugger
+    if (currentPage > 1) {
+        currentPage--;
+        pagBtns[currentPage - 1].click();
+        console.log(currentPage);
+    }
+};
+nextButton.onclick = function() {
+    debugger
+    if (currentPage < pagBtns.length) {
+        currentPage++;
+        pagBtns[currentPage - 1].click();
+        console.log(currentPage);
+    }
+};

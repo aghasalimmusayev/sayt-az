@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- https://sayt.az/ -->
 </head>
 
@@ -528,22 +529,240 @@
         </div>
 
         <div class="container">
-            <section id="sozIsler">
-
+            <section id="sonIsler">
+                <h2 class="text-lg md:text-[22px] lg:text-[32px] text-[#300B60] text-center font-bold">Son İşlərimiz
+                </h2>
+                <p class="text-base md:text-xl text-[#47207E] text-center font-semibold mt-3">Paylaşmaqdan Qürur Duyuruq
+                </p>
+                <div class="isler grid grid-cols-1 md:grid-cols-2 gap-5 mt-10"></div>
+                <div class="flex justify-center space-x-1 dark:text-gray-800 my-20">
+                    <button title="previous" type="button"
+                        class="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" class="w-4">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button"
+                        class="pag_btn cursor-pointer inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+                        title="Page 1">1</button>
+                    <button type="button"
+                        class="pag_btn cursor-pointer inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+                        title="Page 2">2</button>
+                    <button type="button"
+                        class="pag_btn cursor-pointer inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+                        title="Page 3">3</button>
+                    <button type="button"
+                        class="pag_btn cursor-pointer inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+                        title="Page 4">4</button>
+                    <button type="button"
+                        class="pag_btn cursor-pointer inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-50 dark:border-gray-100"
+                        title="Page 5">5</button>
+                    <button title="next" type="button"
+                        class="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-50 dark:border-gray-100">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" class="w-4">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
             </section>
         </div>
 
+        <div class="container">
+            <section id="feedback" class="py-16">
+                <h2 class="text-lg md:text-[22px] lg:text-[32px] text-[#300B60] text-center font-bold">
+                    Müştərilərimizin Rəyləri</h2>
+                <p class="text-base md:text-xl text-[#47207E] text-center font-semibold mt-3">Müştərilərin fikirləri</p>
+                <div class="relative h-[60vh] bg-[#eee] text-sm m-0 p-0 mt-10 rounded-xl">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide border border-[#d8d7d7] rounded-xl">
+                                <div class="h-[60vh] flex flex-col items-center justify-center gap-5">
+                                    <h4 class="text-[#4A2182] font-medium text-xl text-center">Musterilerden musbet rey
+                                    </h4>
+                                    <p class="text-slate-500 mt-2 px-10 text-center">Sayt.az saytımın hazırlanmasında
+                                        gözləntilərimi aşdı. Mənim istəklərimi mükəmməl şəkildə əks etdirdi.</p>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 mr-5">
+                                            <img src="img/seljan.png" alt="" class="w-full">
+                                        </div>
+                                        <div>
+                                            <h6 class="text-base font-semibold text-slate-700">Seljan Novruz</h6>
+                                            <p class="text-base text-left text-slate-500 w-[80%]">CEO</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide border border-[#d8d7d7] rounded-xl">
+                                <div class="h-[60vh] flex flex-col items-center justify-center gap-5">
+                                    <h4 class="text-[#4A2182] font-medium text-xl text-center">Musterilerden musbet rey
+                                    </h4>
+                                    <p class="text-slate-500 mt-2 px-10 text-center">Veb saytımı hazırlamaq üçün
+                                        Sayt.az-ı seçmək biznesim üçün verdiyim ən yaxşı qərar idi.</p>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 mr-5">
+                                            <img src="img/hikmet.png" alt="" class="w-full">
+                                        </div>
+                                        <div>
+                                            <h6 class="text-base font-semibold text-slate-700">Hikmat Taghiyev</h6>
+                                            <p class="text-base text-left text-slate-500 w-[80%]">Accountant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide border border-[#d8d7d7] rounded-xl">
+                                <div class="h-[60vh] flex flex-col items-center justify-center gap-5">
+                                    <h4 class="text-[#4A2182] font-medium text-xl text-center">Musterilerden musbet rey
+                                    </h4>
+                                    <p class="text-slate-500 mt-2 px-6 text-center">Sayt.az komandası tərəfindən
+                                        hazırlanan ev alqı-satqısı saytı, gözləntilərimi tamamilə doğrultdu. Sayt.az-a
+                                        dəyərli xidmətləri üçün təşəkkür edirəm.</p>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 mr-5">
+                                            <img src="img/bahman.png" alt="" class="w-full">
+                                        </div>
+                                        <div>
+                                            <h6 class="text-base font-semibold text-slate-700">Bahman Ahmadli</h6>
+                                            <p class="text-base text-left text-slate-500 w-[80%]">CEO</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-pagination absolute bottom-[-40px] w-full"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <section id="blogs" class="py-16">
+                <h2 class="text-lg md:text-[22px] lg:text-[32px] text-[#300B60] text-center font-bold">
+                    Bloqumuza daxil olun</h2>
+                <p class="text-base md:text-xl text-[#47207E] text-center font-semibold mt-3">Vebin İnkişafı, Dizaynı və
+                    Onlayn Strategiyaları ilə bağlı maraqlı məqalələri kəşf edin</p>
+                <div class="bloqlar grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-10">
+                    <div
+                        class="bloq bg-[#FAF4FF] py-2 px-2 w-full rounded-[7px] hover:shadow-lg hover:border-[#6938b8] border-[2px] border-solid border-[#A271F2] cursor-pointer">
+                        <div class="bloq_img">
+                            <img src="img/blog-1.jpg" alt="blog image"
+                                class="w-full h-[220px] object-cover rounded-[7px] border border-solid border-slate-200">
+                        </div>
+                        <h4 class="text-xl font-medium mt-[30px] mb-[24px] text-slate-700">Uğurlu biznes üçün hansı veb
+                            trendləri izləməlisən?</h4>
+                        <div class="flex flex-wrap gap-[8px] text-base">
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">Feb
+                                27, 2025</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">webdesign</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">marketing</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">sayt</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bloq bg-[#FAF4FF] py-2 px-2 w-full rounded-[7px] hover:shadow-lg hover:border-[#6938b8] border-[2px] border-solid border-[#A271F2] cursor-pointer">
+                        <div class="bloq_img">
+                            <img src="img/blog-2.jpg" alt="blog image"
+                                class="w-full h-[220px] object-cover rounded-[7px] border border-solid border-slate-200">
+                        </div>
+                        <h4 class="text-xl font-medium mt-[30px] mb-[24px] text-slate-700">DeepSeek AI: Yeni Nəsil Süni
+                            İntellekt Aləti</h4>
+                        <div class="flex flex-wrap gap-[8px] text-base">
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">Feb
+                                6, 2025</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">sayt
+                                yaratmaq</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">sayt
+                                sifarisi</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">saytlarin
+                                hazirlanmasi</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bloq bg-[#FAF4FF] py-2 px-2 w-full rounded-[7px] hover:shadow-lg hover:border-[#6938b8] border-[2px] border-solid border-[#A271F2] cursor-pointer">
+                        <div class="bloq_img">
+                            <img src="img/blog-3.jpg" alt="blog image"
+                                class="w-full h-[220px] object-cover rounded-[7px] border border-solid border-slate-200">
+                        </div>
+                        <h4 class="text-xl font-medium mt-[30px] mb-[24px] text-slate-700">2025-ci ildə Onlayn Biznesin
+                            Trendləri</h4>
+                        <div class="flex flex-wrap gap-[8px] text-base">
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">Jan
+                                29, 2025</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">marketing</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">social</span>
+                            <span
+                                class="text-white cursor-pointer border rounded-[8px] items-center bg-[#A271F2] py-1 px-4">pesekar
+                                web dizayn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_btn flex justify-center">
+                    <button
+                        class="w-[300px] py-[10px] text-white bg-[#A271F2] hover:bg-[#742DE4] active:bg-[#5c2da7] text-center text-sm rounded-[8px] font-semibold">
+                        Bütün Bloqlar
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <section id="videolar" class="py-16">
+                <h2 class="text-lg md:text-[22px] lg:text-[32px] text-[#300B60] text-center font-bold">
+                    Videolarımızı Kəşf Edin</h2>
+                <p class="text-base text-[#47207E] text-center font-semibold mt-3">Kəşf Edin, Öyrənin və UğurQazanın</p>
+                <p class="max-w-[700px] mx-auto text-base text-[#47207E] text-center font-semibold mt-3">Son nailiyyətlərimizi,
+                    media çıxışlarımızı və ətraflı təlimlərimizi izləmək üçün video kolleksiyamıza göz atın. İdeal veb
+                    saytınızı qurmaqda sizə necə kömək edə biləcəyimizi öyrənin və uğur hekayəmizdən ilham alın.</p>
+                <div class="mt-10 flex flex-wrap gap-5 justify-center">
+                    <iframe width="600" height="424" src="https://www.youtube.com/embed/KlbBMSbPO8g" title="WEB Dizayn Studiyanın Biznes Saytları üçün Qiymət Planları - WEB.Com.Az" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="600" height="424" src="https://www.youtube.com/embed/dJPCo2ulWiA" title="Domen. Domenlər haqqında məlumat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
 
     </main>
 
     <footer>
         <div class="container">
-
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     <script src="data.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>

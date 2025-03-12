@@ -52,6 +52,27 @@ nav{letter-spacing: 0.7px;}
 .str_img img{transition: .3s;}
 .str_img img:hover{transform: scale(1.1);}
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
 @media (min-width:1024px){
     /*<<---NAVIGATION--->>**/
     nav .fa-bars{display: none;}
