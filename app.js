@@ -9,6 +9,12 @@ let domenName = document.querySelector("#domenName");
 let domenExample = document.querySelector(".domen_example");
 let domenFillingInfo = document.querySelector(".domen_filling_info");
 let planCards = document.querySelectorAll(".plan_card");
+let ayliqPlan = document.querySelector(".ayliq_plan");
+let illikPlan = document.querySelector(".illik_plan");
+let ecoPlanPrice = document.querySelector(".economic_plan .plan_price");
+let standartPlanPrice = document.querySelector(".standart_plan .plan_price");
+let proPlanPrice = document.querySelector(".professional_plan .plan_price");
+let planPeriods = document.querySelectorAll(".plan_period");
 
 vebsaytShow();
 domenShow();
@@ -188,3 +194,23 @@ planCards.forEach(div => {
         this.classList.add("selectedPlan")
     }
 })
+ayliqPlan.onclick = function(){
+    ayliqPlan.classList.remove("unSelected_plan_btn")
+    ayliqPlan.classList.add("selected_plan_btn")
+    illikPlan.classList.remove("selected_plan_btn")
+    illikPlan.classList.add("unSelected_plan_btn")
+    planPeriods.forEach(element => element.innerHTML = "/ay")
+    ecoPlanPrice.innerHTML = "$5"
+    standartPlanPrice.innerHTML = "$10"
+    proPlanPrice.innerHTML = "$20"
+}
+illikPlan.onclick = function(){
+    illikPlan.classList.remove("unSelected_plan_btn")
+    illikPlan.classList.add("selected_plan_btn")
+    ayliqPlan.classList.remove("selected_plan_btn")
+    ayliqPlan.classList.add("unSelected_plan_btn")
+    planPeriods.forEach(element => element.innerHTML = "/il")
+    ecoPlanPrice.innerHTML = "$60"
+    standartPlanPrice.innerHTML = "$120"
+    proPlanPrice.innerHTML = "$240"
+}

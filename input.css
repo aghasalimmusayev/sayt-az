@@ -28,6 +28,15 @@ nav{letter-spacing: 0.7px;}
 .sfr_izle{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
 #domenName{border: none; border-left: 1px solid #e2e2e2;}
 .domen_btn{transform: translateX(-7px);}
+.selected_plan_btn{
+    background-color: #A271F2;
+    color: white;
+    font-weight: 500;
+}
+.unSelected_plan_btn{
+    background-color: white;
+    color: #94A3B8;
+}
 .plan_card:hover{
     border: 2px solid #A271F2;
 }
@@ -40,6 +49,8 @@ nav{letter-spacing: 0.7px;}
     background-color: #A271F2;
     color: white;
 }
+.str_img img{transition: .3s;}
+.str_img img:hover{transform: scale(1.1);}
 
 @media (min-width:1024px){
     /*<<---NAVIGATION--->>**/
@@ -54,6 +65,6 @@ nav{letter-spacing: 0.7px;}
     .navlinks li ul img{display: initial;}
     .container{width: 1250px;}
     .header_content h1{line-height: 80px;}
-
+    .static_info{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 }
 
