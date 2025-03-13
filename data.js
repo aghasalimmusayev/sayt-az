@@ -93,16 +93,11 @@ let saytData = {
         {name: "Basliq Tegleri", price: 100}
     ],
     e_ticaret: [
-        {name: "odenis", price: 200},
-        {name: "mehsullar", price: 300},
-        {name: "filter", price: 300},
-        {name: "sebet", price: 500},
-        {name: "beyendiklerim", price: 300},
-        {name: "mehsulHaqqinda", price: 300}
-    ],
-    logoDizayn: [
-        {name: "ehtiyacYoxdu", price: 0},
-        {name: "sade", price: 100},
-        {name: "xususi", price: 200}
+        {name: "Ödəniş", price: 200},
+        {name: "Mehsullar", price: 300},
+        {name: "Filtr", price: 300},
+        {name: "Sebet", price: 500},
+        {name: "Beyendiklerim", price: 300},
+        {name: "Mehsul Haqqinda", price: 300}
     ]
 };

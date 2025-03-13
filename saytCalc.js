@@ -13,7 +13,15 @@ let saytElaveler = document.querySelector(".sayt_elaveler")
 let elavelerQiymet = document.querySelector(".elaveler_qiymet")
 let elavelerToplam = document.querySelector(".elaveler_toplam")
 let axtarisMotoru = document.querySelector(".axtaris_motoru")
-// let cemQiymet = document.querySelector(".cem_qiymet")
+let axtarisQiymet = document.querySelector(".axtaris_qiymet")
+let seoToplam = document.querySelector(".seo_toplam")
+let eTicaret = document.querySelector(".e_ticaret")
+let eTicaretQiymet = document.querySelector(".e_ticaret_qiymet")
+let eTicaretToplam = document.querySelector(".e_ticaret_toplam")
+let logoInp = document.querySelector(".logo_inp")
+let logoQiymet = document.querySelector(".logo_qiymet")
+let logoToplam = document.querySelector(".logo_toplam")
+let cemQiymet = document.querySelector(".cem_qiymet")
 
 vebsaytShow();
 domenShow();
@@ -21,6 +29,8 @@ hostingShow();
 xidmetShow();
 sirketShow();
 saytElaveInpsShow();
+axtarisMotoruShow();
+eTicaretShow();
 
 options.style.display = "none"
 selected.onclick = function(){
@@ -158,13 +168,22 @@ function sirketShow(){
             </li>`
     })
 }
+
+let pagePrice = 0
+let addPrice = 0
+let seoPrice = 0
+let ePrice = 0
+let logoPrice = 0
 pageInp.onchange = function(){
-    sehifeQiymet.innerHTML = `${pageInp.value} səhifə / ₼ ${pageInp.value * pageQuality.value}`
-    staticPages.innerHTML = `₼ ${pageInp.value * pageQuality.value}`
+    pagePrice = `${pageInp.value * pageQuality.value}`
+    sehifeQiymet.innerHTML = `${pageInp.value} səhifə / ₼ ${pagePrice}`
+    staticPages.innerHTML = `₼ ${pagePrice}`
+    toplamSaytQiymeti();
 }
 pageQuality.onchange = function(){
     pageInp.onchange();
-    staticPages.innerHTML = `₼ ${pageInp.value * pageQuality.value}`
+    staticPages.innerHTML = `₼ ${pagePrice}`
+    toplamSaytQiymeti();
 }
 function saytElaveInpsShow(){
     saytData.eleveler.forEach(element => {
@@ -173,7 +192,10 @@ function saytElaveInpsShow(){
                 <div class="w-3/4"><span class="text-sm font-medium text-gray-900">${element.name}</span></div>
                 <div><input class="saytElave_input sr-only peer" type="checkbox" name="${element.name}" value="${element.price}">
                     <div
-                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white  after:content-['']  after:absolute  after:top-0.5  after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5  after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#A271F2]">
+                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white
+                          after:content-['']  after:absolute z-10 after:top-0.5  after:right-[22px] after:bg-white after:border-gray-300 
+                          after:border after:rounded-full after:h-5  after:w-5 after:transition-all duration-300 
+                          after:duration-300 peer-checked:bg-[#A271F2]">
                     </div>
                 </div>
             </label>`
@@ -181,20 +203,81 @@ function saytElaveInpsShow(){
 }
 let saytElaveInputlari = document.querySelectorAll(".saytElave_input");
 saytElaveInputlari.forEach(input => {
-    input.addEventListener('change', calculateTotal);
+    input.addEventListener('change', elaveleriTopla);
 });
-function calculateTotal(){
-    let cem = 0;
+function elaveleriTopla(){
     saytElaveInputlari.forEach(input => {
         if (input.checked) {
-            cem += parseInt(input.value);
+            addPrice += parseInt(input.value);
         }
     });
-    elavelerQiymet.innerHTML = `₼ ${cem}`;
-    elavelerToplam.innerHTML = `₼ ${cem}`
+    elavelerQiymet.innerHTML = `₼ ${addPrice}`;
+    elavelerToplam.innerHTML = `₼ ${addPrice}`
+    toplamSaytQiymeti();
 }
 function axtarisMotoruShow(){
     saytData.SEO.forEach(element => {
-        
+        axtarisMotoru.innerHTML += 
+            `<label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="${element.price}" class="axtaris_checkbox sr-only peer"/>
+                <div
+                    class="relative w-5 h-5 border border-gray-300 rounded-lg bg-white peer-checked:bg-[#A271F2]
+                        peer-checked:border-[#A271F2] after:content-[''] after:absolute after:left-1/2 after:top-1/2 
+                        after:h-[10px] after:w-[5px] after:border-r-2 after:border-b-2  after:border-white after:rotate-45
+                        after:opacity-0 after:-translate-x-1/2 after:-translate-y-1/2 peer-checked:after:opacity-100 transition-all">
+                </div>
+                <span class="ml-2 text-gray-700 text-lg">${element.name}</span>
+            </label>`        
     })
+}
+let axtarisCheckboxlar = document.querySelectorAll(".axtaris_checkbox");
+axtarisCheckboxlar.forEach(checkbox => {
+    checkbox.addEventListener("change", axtarisHesabla);
+})
+function axtarisHesabla(){
+    axtarisCheckboxlar.forEach(checkbox => {
+        if (checkbox.checked) {
+            seoPrice += parseInt(checkbox.value);
+        }
+    });
+    axtarisQiymet.innerHTML = `₼ ${seoPrice}`;
+    seoToplam.innerHTML = `₼ ${seoPrice}`
+    toplamSaytQiymeti();
+}
+function eTicaretShow(){
+    saytData.e_ticaret.forEach(element => {
+        eTicaret.innerHTML += 
+            `<label class="relative xl:items-center gap-2 flex cursor-pointer justify-between">
+                <div class="w-3/4"><span class="text-sm font-medium text-gray-900">${element.name}</span></div>
+                <div><input class="e_ticaret_input sr-only peer" type="checkbox" name="${element.name}" value="${element.price}">
+                    <div
+                        class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white  after:content-['']  after:absolute  after:top-0.5  after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5  after:w-5 after:transition-all duration-300 after:duration-300 peer-checked:bg-[#A271F2]">
+                    </div>
+                </div>
+            </label>`
+    })
+}
+let eTicaretInputlar = document.querySelectorAll(".e_ticaret_input");
+eTicaretInputlar.forEach(input => {
+    input.addEventListener('change', eTicaretTopla);
+});
+function eTicaretTopla(){
+    eTicaretInputlar.forEach(input => {
+        if (input.checked) {
+            ePrice += parseInt(input.value);
+        }
+    });
+    eTicaretQiymet.innerHTML = `₼ ${ePrice}`;
+    eTicaretToplam.innerHTML = `₼ ${ePrice}`
+    toplamSaytQiymeti();
+}
+logoInp.onchange = function(){
+    logoPrice = `₼ ${logoInp.value}`
+    logoQiymet.innerHTML = logoPrice
+    logoToplam.innerHTML = logoPrice
+    toplamSaytQiymeti();
+}
+function toplamSaytQiymeti(){
+    let toplam = Math.floor(pagePrice) + Math.floor(addPrice) + Math.floor(seoPrice) + Math.floor(ePrice) + Math.floor(logoPrice)
+    toplam <= 450 ? cemQiymet.innerHTML = "₼ 450" : cemQiymet.innerHTML = `₼ ${toplam}`
 }

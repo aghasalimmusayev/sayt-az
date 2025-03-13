@@ -16,12 +16,11 @@
 
 <body>
 
-    <div class="navigation fixed w-full">
+    <div class="navigation fixed z-50 w-full">
         <nav class="px-10 py-4 relative bg-white mx-auto">
-            <div class="parent_div flex justify-between items-center">
+            <div class="parent_div flex flex-row justify-between items-center">
                 <a class="logo" href="index.html"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
-                <div
-                    class="links bg-white absolute z-20 lg:static top-0 right-0 p-10 lg:p-0 h-screen w-2/3 hidden lg:flex lg:max-w-[1000px]">
+                <div class="links bg-white absolute z-40 lg:static top-0 right-0 p-10 lg:p-0 h-screen w-2/3 hidden lg:flex lg:max-w-[1000px]">
                     <i class="fa-solid fa-xmark text-2xl cursor-pointer p-1 absolute top-[18px] right-10"
                         onclick="closeBar()"></i>
                     <ul class="navlinks flex flex-col lg:flex-row my-5 lg:m-0 lg:items-center lg:gap-3">
@@ -48,8 +47,7 @@
                         </li>
                     </ul>
                 </div>
-                <div
-                    class="right_links absolute hidden z-30 lg:static lg:flex lg:items-center top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit">
+                <div class="right_links absolute hidden z-30 lg:static lg:flex lg:items-center top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit">
                     <div class="flex items-center gap-5">
                         <select id="valuta"
                             class="cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
@@ -92,7 +90,7 @@
                     Biznesinizi bizimlə rəqəmsal dünyada
                     <span class="sm:mx-4 md:mx-6 text-blue-600 relative lg:mx-[30px] text-5">daha asan
                         <div
-                            class="w-[135px] md:w-[165px] lg:w-[185px] h-[120px] absolute top-[-12px] md:top-[-12px] lg:top-[-10px] left-[-10px] md:left-[-10px]">
+                            class="w-[135px] md:w-[165px] lg:w-[250px] h-[120px] absolute top-[-12px] md:top-[-12px] lg:top-[-13px] left-[-10px] md:left-[-10px]">
                             <img class="w-full" src="img/daha asan.svg" alt="">
                         </div>
                     </span>yoldan irəliyə apar!
@@ -200,12 +198,10 @@
                         <h4
                             class="sm:text-[22px] md:text-[32px] tracking-[0.1px] text-center font-medium text-[#300B60]">
                             Domen Adını Axtarın</h4>
-                        <p
-                            class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
+                        <p class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
                             .az domain sifariş etməmişdən öncə <span class="font-bold">whois.az</span> saytında yoxlayın
                         </p>
-                        <p
-                            class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
+                        <p class="text-base font-normal tracking-[0.1px] text-[20px] max-w-[636px] text-[#300B60] text-center">
                             Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır.
                             Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.
                             <a class="font-bold" href="#">Ətraflı oxu...</a>
@@ -222,7 +218,7 @@
                                 class="domen_btn bg-[#A271F2] hover:bg-[#51258b] active:bg-[#300B60] px-6 text-white rounded-[4px]">Axtar</button>
                         </form>
                         <p class="domen_filling_info text-base text-[#300B60]"></p>
-                        <div class="domen_example sm:grid sm:grid-cols-3 md:flex gap-10 mt-8"></div>
+                        <div class="domen_example grid grid-cols-3 md:grid-cols-6 gap-10 mt-8"></div>
                     </div>
                 </section>
             </div>

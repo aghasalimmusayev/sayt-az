@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="navigation w-full">
+    <div class="navigation fixed z-50 w-full">
         <nav class="px-10 py-4 relative bg-white mx-auto">
             <div class="parent_div flex justify-between items-center">
                 <a class="logo" href="index.html"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
@@ -85,8 +85,8 @@
 
     <main>
 
-        <div class="container">
-            <section id="saytCalc" class="bg-[#F5F5F5] py-5 px-3 mt-[150px]">
+        <div class="container  pt-[120px]">
+            <section id="saytCalc" class="bg-[#F5F5F5] py-5 px-3">
                 <div class="flex flex-col gap-5 lg:flex-row justify-between items-start ">
                     <div class="qiymet_teklifi lg:w-[65%] w-full bg-white p-5">
                         <h2 class="text-4xl font-bold mt-4 mb-12">Qiymət Təklifi Al</h2>
@@ -132,21 +132,35 @@
                         </div>
                         <h6 class="text-[#212529] text-lg font-medium mt-10">Axtarış motorunun optimallaşdırılması</h6>
                         <div class="mt-4 bg-[#f8f8fa] rounded-md">
-                            <div class="axtaris_motoru grid grid-cols-1 md:grid-cols-2 gap-3 p-5">
-
-                                <label class="inline-flex items-center cursor-pointer">
-                                    <input type="checkbox" value="50"
-                                        class="axtaris_checkbox h-5 w-5 bg-[#A271F2] text-[#A271F2] rounded-lg focus:ring-0 focus:outline-none">
-                                    <span class="ml-2 text-gray-700 text-lg font-medium">Sitemap</span>
-                                </label>
-
-                            </div>
+                            <div class="axtaris_motoru grid grid-cols-1 md:grid-cols-2 gap-3 p-5"></div>
                             <div class="flex justify-between items-center mt-4 p-4 bg-[#4a84bf26]">
                                 <p class="text-[#285a70]">Xərc :</p>
                                 <p class="axtaris_qiymet text-[#A271F2] text-[22px] font-semibold">₼ 0</p>
                             </div>
                         </div>
-
+                        <h6 class="text-[#212529] text-lg font-medium mt-10">Elektron ticarət əlavələri</h6>
+                        <div class="mt-4 bg-[#f8f8fa] rounded-md">
+                            <div class="e_ticaret grid grid-cols-1 md:grid-cols-2 gap-3 p-5"></div>
+                            <div class="flex justify-between items-center mt-4 p-4 bg-[#4a84bf26]">
+                                <p class="text-[#285a70]">Xərc :</p>
+                                <p class="e_ticaret_qiymet text-[#A271F2] text-[22px] font-semibold">₼ 0</p>
+                            </div>
+                        </div>
+                        <h6 class="text-[#212529] text-lg font-medium mt-10">Logo dizaynı</h6>
+                        <div class="px-5 py-3 w-full mt-4 bg-[#f8f8fa] rounded-md">
+                            <div class="flex justify-between items-center text-xs md:text-base">
+                                <span>Ehtiyac yoxdur</span>
+                                <span>Sade</span>
+                                <span>Xüsusi</span>
+                            </div>
+                            <input
+                                class="logo_inp w-full accent-[#A271F2] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                                min="0" max="200" step="100" type="range" value="1">
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-[#4a84bf26]">
+                            <p class="text-[#285a70]">Xərc :</p>
+                            <p class="logo_qiymet text-[#A271F2] text-[22px] font-semibold">₼ 0</p>
+                        </div>
                     </div>
                     <div class="toplam_qiymet lg:w-[30%] w-full bg-white p-6">
                         <div class="qiymetler flex flex-col gap-4">
@@ -161,15 +175,15 @@
                             </p>
                             <p class="flex justify-between items-center">
                                 <span class="text-[#8b8b9a]">SEO :</span>
-                                <span class="text-[#A271F2] font-bold text-lg">₼ 0</span>
+                                <span class="seo_toplam text-[#A271F2] font-bold text-lg">₼ 0</span>
                             </p>
                             <p class="flex justify-between items-center">
                                 <span class="text-[#8b8b9a]">E-ticarət :</span>
-                                <span class="text-[#A271F2] font-bold text-lg">₼ 0</span>
+                                <span class="e_ticaret_toplam text-[#A271F2] font-bold text-lg">₼ 0</span>
                             </p>
                             <p class="flex justify-between items-center">
                                 <span class="text-[#8b8b9a]">Logo dizaynı :</span>
-                                <span class="text-[#A271F2] font-bold text-lg">₼ 0</span>
+                                <span class="logo_toplam text-[#A271F2] font-bold text-lg">₼ 0</span>
                             </p>
                             <p class="flex justify-between items-center border-t py-5">
                                 <span class="font-bold text-[#8b8b9a]">Qeyd :</span>
