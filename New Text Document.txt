@@ -13,10 +13,10 @@ blog - 200
 responsive - 100
 mesajlasma - 50
 qalereya - 100
-saytda axtaris - 100
+axtaris - 100
 rezervasyon - 400
-analitika/izleme - 50
-uzv girisi/profiller - 400
+izleme - 50
+profiller - 400
 form 400
 canli sohbet - 50
 elaqe formasi - 100

@@ -5,33 +5,17 @@ let domenList = document.querySelector(".domen_list");
 let hostingList = document.querySelector(".hosting_list");
 let xidmetList = document.querySelector(".xidmet_list");
 let sirketList = document.querySelector(".sirket_list");
-let domenName = document.querySelector("#domenName");
-let domenExample = document.querySelector(".domen_example");
-let domenFillingInfo = document.querySelector(".domen_filling_info");
-let planCards = document.querySelectorAll(".plan_card");
-let ayliqPlan = document.querySelector(".ayliq_plan");
-let illikPlan = document.querySelector(".illik_plan");
-let ecoPlanPrice = document.querySelector(".economic_plan .plan_price");
-let standartPlanPrice = document.querySelector(".standart_plan .plan_price");
-let proPlanPrice = document.querySelector(".professional_plan .plan_price");
-let planPeriods = document.querySelectorAll(".plan_period");
-let isler = document.querySelector(".isler");
-let pagBtns = document.querySelectorAll(".pag_btn")
-let prevButton = document.querySelector("button[title='previous']");
-let nextButton = document.querySelector("button[title='next']");
-
-let start = 0
-let son = 6
-pagBtns[0].classList.add("bg-[#996BE4]", "text-white");
+let pageInp = document.querySelector(".page_inp")
+let pageQuality = document.querySelector(".page_quality")
+let sehifeQiymet = document.querySelector(".sehife_qiymet")
+let staticPages = document.querySelector(".static_pages")
+// let cemQiymet = document.querySelector(".cem_qiymet")
 
 vebsaytShow();
 domenShow();
 hostingShow();
 xidmetShow();
 sirketShow();
-domenOption();
-domenNumune();
-showPortfolio();
 
 options.style.display = "none"
 selected.onclick = function(){
@@ -169,101 +153,11 @@ function sirketShow(){
             </li>`
     })
 }
-function domenOption(){
-    saytData.domenSelect.forEach(item => {
-        domenName.innerHTML += `
-            <option value="${item}">${item}</option>`
-    })
+pageInp.onchange = function(){
+    sehifeQiymet.innerHTML = `${pageInp.value} səhifə / ₼ ${pageInp.value * pageQuality.value}`
+    staticPages.innerHTML = `₼ ${pageInp.value * pageQuality.value}`
 }
-function domenNumune(){
-    saytData.domenSelect
-    .slice(0, 6)
-    .forEach(item => {
-        domenExample.innerHTML += `
-        <div class="flex gap-5">
-            <div class="p-2 cursor-pointer border-none text-center" onclick="domenSec('${item}')">
-                <div class="text-[#A271F2] font-semibold text-2xl">${item}</div>
-                <div class="text-[#A271F2] font-semibold">$40/il</div>
-            </div>
-        </div>`
-    })
+pageQuality.onchange = function(){
+    pageInp.onchange();
+    staticPages.innerHTML = `₼ ${pageInp.value * pageQuality.value}`
 }
-function domenSec(domen){
-    domenName.value = domen    
-    domenName.onchange();
-}
-domenName.onchange = function(){
-    domenFillingInfo.innerHTML = ""   
-    domenFillingInfo.innerHTML = "*Domen adı düzgün deyil.Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər"   
-}
-planCards.forEach(div => {
-    div.onclick = function(){
-        planCards.forEach(d => {
-            d.classList.remove("selectedPlan")
-        })
-        this.classList.add("selectedPlan")
-    }
-})
-ayliqPlan.onclick = function(){
-    ayliqPlan.classList.remove("unSelected_plan_btn")
-    ayliqPlan.classList.add("selected_plan_btn")
-    illikPlan.classList.remove("selected_plan_btn")
-    illikPlan.classList.add("unSelected_plan_btn")
-    planPeriods.forEach(element => element.innerHTML = "/ay")
-    ecoPlanPrice.innerHTML = "$5"
-    standartPlanPrice.innerHTML = "$10"
-    proPlanPrice.innerHTML = "$20"
-}
-illikPlan.onclick = function(){
-    illikPlan.classList.remove("unSelected_plan_btn")
-    illikPlan.classList.add("selected_plan_btn")
-    ayliqPlan.classList.remove("selected_plan_btn")
-    ayliqPlan.classList.add("unSelected_plan_btn")
-    planPeriods.forEach(element => element.innerHTML = "/il")
-    ecoPlanPrice.innerHTML = "$60"
-    standartPlanPrice.innerHTML = "$120"
-    proPlanPrice.innerHTML = "$240"
-}
-function showPortfolio(){
-    isler.innerHTML = ""
-    saytData.portfolio
-    .slice(start, son)
-    .forEach(element => {
-        isler.innerHTML += 
-            `<div class="website bg-[#FAF4FF] w-full h-fit p-6 rounded-[30px] border-2 border-[#E4D7FD] cursor-pointer">
-                <img src="${element.img}" 
-                    alt="site sekli" class="site_img w-full h-[300px] md:h-[240px] lg:h-[320px] xl:h-[380px] object-cover rounded-[15px]">
-                <h4 class="site_name text-sm md:text-xl font-semibold text-[#300B60] mt-6">${element.name}</h4>
-            </div>`
-    })
-}
-pagBtns.forEach((pagButton, index) => {
-    pagButton.onclick = function() {
-        debugger
-        pagBtns.forEach(btn => {
-            btn.classList.remove("bg-[#996BE4]", "text-white");
-        });
-        this.classList.add("bg-[#996BE4]", "text-white");
-        start = index * 6;
-        son = Math.min((index + 1) * 6, saytData.portfolio.length);
-        currentPage = index + 1;
-        showPortfolio();
-    };
-});
-let currentPage = 1;
-prevButton.onclick = function() {
-    debugger
-    if (currentPage > 1) {
-        currentPage--;
-        pagBtns[currentPage - 1].click();
-        console.log(currentPage);
-    }
-};
-nextButton.onclick = function() {
-    debugger
-    if (currentPage < pagBtns.length) {
-        currentPage++;
-        pagBtns[currentPage - 1].click();
-        console.log(currentPage);
-    }
-};

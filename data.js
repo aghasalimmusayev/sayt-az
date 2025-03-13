@@ -68,5 +68,46 @@ let saytData = {
         {name: "AZERBAYJANJOURNALISTS.AZ", img: "https://api.websiteca.com/storage/DlosbjYnNSzN23aGOLLzuUrizgG4ZwgvP1saffZ0.jpg"},
         {name: "PLANNING.AZ", img: "https://api.websiteca.com/storage/o76exUgx9DfL8dP2VrSCofJkYLRBf3p79l09mnBh.jpg"},
         {name: "WWW.ART-TRIO.AZ", img: "https://api.websiteca.com/storage/pGOaLJc2bIgxb32dnk3Eoi9VbhyjQjKx97BBgJJO.jpg"}
+    ],
+    sehife: [
+        {name: "sade", price: 100},
+        {name: "orta", price: 200},
+        {name: "xususi", price: 300}
+    ],
+    eleveler: [
+        {name: "blog", price: 200},
+        {name: "responsive", price: 100},
+        {name: "mesajlasma", price: 50},
+        {name: "qalereya", price: 100},
+        {name: "axtaris", price: 100},
+        {name: "rezervasyon", price: 400},
+        {name: "izleme", price: 50},
+        {name: "profiller", price: 400},
+        {name: "form", price: 400},
+        {name: "sohbet", price: 50},
+        {name: "elaqe", price: 100},
+        {name: "geolocasiya", price: 100},
+        {name: "sosial", price: 50},
+        {name: "admin", price: 300}
+    ],
+    SEO: [
+        {name: "basliqlar", price: 200},
+        {name: "qabaqcilTexnika", price: 300},
+        {name: "sitemap", price: 100},
+        {name: "acarSoz", price: 300},
+        {name: "basliqlar", price: 100}
+    ],
+    e_ticaret: [
+        {name: "odenis", price: 200},
+        {name: "mehsullar", price: 300},
+        {name: "filter", price: 300},
+        {name: "sebet", price: 500},
+        {name: "beyendiklerim", price: 300},
+        {name: "mehsulHaqqinda", price: 300}
+    ],
+    logoDizayn: [
+        {name: "ehtiyacYoxdu", price: 0},
+        {name: "sade", price: 100},
+        {name: "xususi", price: 200}
     ]
 };
