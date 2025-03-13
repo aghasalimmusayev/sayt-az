@@ -69,33 +69,28 @@ let saytData = {
         {name: "PLANNING.AZ", img: "https://api.websiteca.com/storage/o76exUgx9DfL8dP2VrSCofJkYLRBf3p79l09mnBh.jpg"},
         {name: "WWW.ART-TRIO.AZ", img: "https://api.websiteca.com/storage/pGOaLJc2bIgxb32dnk3Eoi9VbhyjQjKx97BBgJJO.jpg"}
     ],
-    sehife: [
-        {name: "sade", price: 100},
-        {name: "orta", price: 200},
-        {name: "xususi", price: 300}
-    ],
     eleveler: [
-        {name: "blog", price: 200},
-        {name: "responsive", price: 100},
-        {name: "mesajlasma", price: 50},
-        {name: "qalereya", price: 100},
-        {name: "axtaris", price: 100},
-        {name: "rezervasyon", price: 400},
-        {name: "izleme", price: 50},
-        {name: "profiller", price: 400},
-        {name: "form", price: 400},
-        {name: "sohbet", price: 50},
-        {name: "elaqe", price: 100},
-        {name: "geolocasiya", price: 100},
-        {name: "sosial", price: 50},
-        {name: "admin", price: 300}
+        {name: "Blog", price: 200},
+        {name: "Responsive", price: 100},
+        {name: "Mesajlaşma", price: 50},
+        {name: "Qalereya", price: 100},
+        {name: "Saytda Axtarış", price: 100},
+        {name: "Rezervasyon", price: 400},
+        {name: "Analitika / İzleme", price: 50},
+        {name: "Üzv girişi / Profiller", price: 400},
+        {name: "Forum", price: 400},
+        {name: "Canlı Söhbət", price: 50},
+        {name: "Əlaqə Forması", price: 100},
+        {name: "Xəritə məlumatı / Geolocation", price: 100},
+        {name: "Sosial Media inteqrasiyası", price: 50},
+        {name: "Admin Penel", price: 300}
     ],
     SEO: [
-        {name: "basliqlar", price: 200},
-        {name: "qabaqcilTexnika", price: 300},
-        {name: "sitemap", price: 100},
-        {name: "acarSoz", price: 300},
-        {name: "basliqlar", price: 100}
+        {name: "Basliqlar & Meta", price: 200},
+        {name: "+20 Qabaqcil Texnika", price: 300},
+        {name: "Sitemap", price: 100},
+        {name: "Acar Soz", price: 300},
+        {name: "Basliq Tegleri", price: 100}
     ],
     e_ticaret: [
         {name: "odenis", price: 200},
