@@ -206,6 +206,7 @@ saytElaveInputlari.forEach(input => {
     input.addEventListener('change', elaveleriTopla);
 });
 function elaveleriTopla(){
+    addPrice = 0;
     saytElaveInputlari.forEach(input => {
         if (input.checked) {
             addPrice += parseInt(input.value);
@@ -235,6 +236,7 @@ axtarisCheckboxlar.forEach(checkbox => {
     checkbox.addEventListener("change", axtarisHesabla);
 })
 function axtarisHesabla(){
+    seoPrice = 0;
     axtarisCheckboxlar.forEach(checkbox => {
         if (checkbox.checked) {
             seoPrice += parseInt(checkbox.value);
@@ -262,6 +264,7 @@ eTicaretInputlar.forEach(input => {
     input.addEventListener('change', eTicaretTopla);
 });
 function eTicaretTopla(){
+    ePrice = 0;
     eTicaretInputlar.forEach(input => {
         if (input.checked) {
             ePrice += parseInt(input.value);
@@ -272,9 +275,9 @@ function eTicaretTopla(){
     toplamSaytQiymeti();
 }
 logoInp.onchange = function(){
-    logoPrice = `₼ ${logoInp.value}`
-    logoQiymet.innerHTML = logoPrice
-    logoToplam.innerHTML = logoPrice
+    logoPrice = logoInp.value
+    logoQiymet.innerHTML = `₼ ${logoPrice}`
+    logoToplam.innerHTML = `₼ ${logoPrice}`
     toplamSaytQiymeti();
 }
 function toplamSaytQiymeti(){

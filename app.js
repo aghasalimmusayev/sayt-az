@@ -56,20 +56,19 @@ function openBar(){
     document.querySelector(".links").style.display = "initial"
     document.querySelector(".right_links").style.display = "initial"
     document.querySelector(".fa-bars").style.display = "none"
-    document.querySelector(".fa-xmark").style.display = "initial" // Əlavə edildi
+    document.querySelector(".fa-xmark").style.display = "initial"
 }
 function closeBar(){
     document.querySelector(".links").style.display = "none"
     document.querySelector(".right_links").style.display = "none"
     document.querySelector(".fa-bars").style.display = "initial"
-    document.querySelector(".fa-xmark").style.display = "none" // Əlavə edildi
+    document.querySelector(".fa-xmark").style.display = "none"
 }
 document.addEventListener("click", function(event){
     const bars = document.querySelector(".fa-bars");
     const xmark = document.querySelector(".fa-xmark");
     const links = document.querySelector(".links");
-    const rightLinks = document.querySelector(".right_links");
-    
+    const rightLinks = document.querySelector(".right_links");    
     if (!links.contains(event.target) && 
         !rightLinks.contains(event.target) && 
         !bars.contains(event.target) && 
@@ -194,7 +193,15 @@ function domenSec(domen){
 }
 domenName.onchange = function(){
     domenFillingInfo.innerHTML = ""   
-    domenFillingInfo.innerHTML = "*Domen adı düzgün deyil.Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər"   
+    domenFillingInfo.innerHTML = "*Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər"   
+}
+function checkDomain(value){
+    const validPattern = /^[a-zA-Z0-9-]*$/;
+    if (!validPattern.test(value)) {
+        domenFillingInfo.innerHTML = "Domen adı düzgün deyil. Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər.";
+    } else {
+        domenFillingInfo.innerHTML = "";
+    }
 }
 planCards.forEach(div => {
     div.onclick = function(){

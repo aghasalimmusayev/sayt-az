@@ -89,8 +89,8 @@
 
         <div class="container  pt-[120px]">
             <section id="saytCalc" class="bg-[#F5F5F5] py-5 px-3">
-                <div class="flex flex-col gap-5 lg:flex-row justify-between items-start ">
-                    <div class="qiymet_teklifi lg:w-[65%] w-full bg-white p-5">
+                <div class="flex flex-col gap-5 lg:flex-row justify-between items-start relative">
+                    <div class="qiymet_teklifi lg:w-[65%] w-full bg-white p-5 overflow-y-scrollscroll">
                         <h2 class="text-4xl font-bold mt-4 mb-12">Qiymət Təklifi Al</h2>
                         <h6 class="text-[#212529] text-lg font-medium">Statik səhifələr</h6>
                         <div class="sehife_sayi mt-4 bg-[#f8f8fa] rounded-md">
@@ -116,7 +116,7 @@
                                     </div>
                                     <input
                                         class="page_quality w-full accent-[#A271F2] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                                        min="100" max="300" step="100" type="range" value="1">
+                                        min="100" max="300" step="100" type="range" value="100">
                                 </div>
                             </div>
                             <div class="flex justify-between items-center mt-4 p-4 bg-[#4a84bf26]">
@@ -157,14 +157,14 @@
                             </div>
                             <input
                                 class="logo_inp w-full accent-[#A271F2] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                                min="0" max="200" step="100" type="range" value="1">
+                                min="0" max="200" step="100" type="range" value="0">
                         </div>
                         <div class="flex justify-between items-center p-4 bg-[#4a84bf26]">
                             <p class="text-[#285a70]">Xərc :</p>
                             <p class="logo_qiymet text-[#A271F2] text-[22px] font-semibold">₼ 0</p>
                         </div>
                     </div>
-                    <div class="toplam_qiymet lg:w-[30%] w-full bg-white p-6">
+                    <div class="toplam_qiymet lg:w-[30%] w-full bg-white p-6 sticky top-0">
                         <div class="qiymetler flex flex-col gap-4">
                             <h4 class="">Təklifiniz</h4>
                             <p class="flex justify-between items-center">
@@ -207,7 +207,7 @@
 
     </main>
 
-    <footer class="py-16 border-t bg-[#FAF4FF]">
+    <footer class="py-16 border-t mt-5 bg-[#FAF4FF]">
         <div class="container">
             <div class="footer_content pb-10 flex flex-col gap-6 md:flex-row">
                 <div class="w-full md:w-[60%]">

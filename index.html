@@ -217,9 +217,10 @@
                             <div
                                 class="inp_box bg-white max-w-[800px] flex justify-center items-center border border-gray-300 border-r-0 rounded-md py-2 px-3">
                                 <input type="text"
-                                    class="w-full pr-3 text-black outline-none placeholder:text-slate-400"
-                                    placeholder="İstədiyiniz domen adını daxil edin">
-                                <select id="domenName" class="text-slate-500 outline-none border-none border-l border-[#e2e2e2]"></select>
+                                    class="w-full md:w-[400px] pr-3 text-black outline-none 
+                                    placeholder:text-slate-400 placeholder:text-xs md:placeholder:text-base"
+                                    placeholder="İstədiyiniz domen adını daxil edin" oninput="checkDomain(this.value)">
+                                <select id="domenName" class="text-slate-500 outline-none border-l border-[#e2e2e2]"></select>
                             </div>
                             <button
                                 class="domen_btn bg-[#A271F2] hover:bg-[#51258b] active:bg-[#300B60] px-6 text-white rounded-[4px]">Axtar</button>
@@ -249,9 +250,8 @@
                             class="illik_plan unSelected_plan_btn sm:w-50 w-20 py-3 sm:px-8 px-4 sm:max-w-[120px] md:py-[13px] md:w-[124px] xs:text-base text-sm flex items-center ease-out justify-center rounded-3xl cursor-pointer transition-colors duration-[500ms]">İllik</span>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-0 gap-2">
-                    <div
-                        class="plan_card box-border economic_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer transition bg-[#FAFBFF]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-0 lg:items-center gap-2">
+                    <div class="plan_card h-fit box-border economic_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer transition bg-[#FAFBFF]">
                         <div class="mb-5">
                             <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
                             <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
@@ -281,21 +281,21 @@
                             class="border border-[#A271F2] rounded-3xl text-sm font-semibold text-[#A271F2] text-center w-full py-2">Sifariş
                             et</button>
                     </div>
-                    <div
-                        class="plan_card box-border standart_plan selectedPlan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer transition bg-[#FAFBFF]">
+                    <div class="plan_card h-fit box-border standart_plan selectedPlan relative border-[1px] rounded-lg p-2 md:p-4 lg:p-7 cursor-pointer transition bg-[#FAFBFF]">
+                        <p class="absolute right-4 top-4 text-xs px-3 py-2 bg-white rounded-2xl font-bold text-[#AB71F2]">ƏN POPULYAR</p>
                         <div class="mb-5">
                             <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
                             <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
                         </div>
                         <div class="bg-white p-3 rounded-lg">
-                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Ekonomik</h3>
+                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Standart</h3>
                             <ul class="mt-5 space-y-3 text-sm text-[#300B60]">
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
-                                        class="font-bold">1</span> Domen</li>
-                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">3
-                                        GB</span> Disk Həcmi</li>
+                                        class="font-bold">2</span> Domen</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">
+                                    8 GB</span> Disk Həcmi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
-                                        class="font-bold">3</span> E-mail Hesabi</li>
+                                        class="font-bold">5</span> E-mail Hesabi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Premium müştəri dəstəyi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>SSL Təhlükəsizliyi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Yedəkləmə və bərpa</li>
@@ -312,21 +312,20 @@
                             class="border border-[#A271F2] rounded-3xl text-sm font-semibold text-[#A271F2] text-center w-full py-2">Sifariş
                             et</button>
                     </div>
-                    <div
-                        class="plan_card box-border professional_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer transition bg-[#FAFBFF]">
+                    <div class="plan_card h-fit box-border professional_plan border-[1px] rounded-lg p-2 md:p-4 lg:p-6 cursor-pointer transition bg-[#FAFBFF]">
                         <div class="mb-5">
                             <span class="plan_price text-2xl md:text-4xl font-bold text-[#300B60]">$5</span>
                             <span class="plan_period text-sm font-semibold text-[#300B60] ml-1">/ay</span>
                         </div>
                         <div class="bg-white p-3 rounded-lg">
-                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Ekonomik</h3>
+                            <h3 class="text-[#300B60] sm:text-2xl text-lg font-bold">Professional</h3>
                             <ul class="mt-5 space-y-3 text-sm text-[#300B60]">
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
-                                        class="font-bold">1</span> Domen</li>
-                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">3
+                                        class="font-bold">5</span> Domen</li>
+                                <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span class="font-bold">14
                                         GB</span> Disk Həcmi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i><span
-                                        class="font-bold">3</span> E-mail Hesabi</li>
+                                        class="font-bold">Limitsiz</span> E-mail Hesabi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Premium müştəri dəstəyi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>SSL Təhlükəsizliyi</li>
                                 <li><i class="fa-solid fa-check text-[#00B090] mr-2"></i>Yedəkləmə və bərpa</li>
