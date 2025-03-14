@@ -2,19 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html {scroll-behavior: smooth;}
 .container{
     width: 90%;
     margin: auto;
 }
 .body{font-family: "Manrope", sans-serif;}
-nav{letter-spacing: 0.7px;}
-.links{box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}
 .lang_selection img{
     width: 25px;
     height: 15px;
 }
-.option{border: 1px solid gray;}
-.login_btn{border: 1px solid #732CE3;}
 .teklif_btn{background: linear-gradient(90deg, rgba(121,53,227,1) 49%, rgba(189,164,230,1) 94%);}
 .navlinks li ul{
     border: 1px solid gray;
@@ -23,10 +20,8 @@ nav{letter-spacing: 0.7px;}
     z-index: 100;
 }
 .navlinks li ul img{display: none;}
-.header_content h1{line-height: 60px;}
 .three_cards div{box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 .sfr_izle{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
-#domenName{border: none; border-left: 1px solid #e2e2e2;}
 .domen_btn{transform: translateX(-7px);}
 .selected_plan_btn{
     background-color: #A271F2;
@@ -37,10 +32,6 @@ nav{letter-spacing: 0.7px;}
     background-color: white;
     color: #94A3B8;
 }
-.plan_card:hover{
-    border: 2px solid #A271F2;
-}
-.plan_card{box-sizing: border-box;}
 .selectedPlan{
     box-shadow: #A271F2 0px 10px 20px, #A271F2 0px 6px 6px;
     border: 2px solid #A271F2;
@@ -49,6 +40,7 @@ nav{letter-spacing: 0.7px;}
     background-color: #A271F2;
     color: white;
 }
+.plan_card:hover{ border: 2px solid #A271F2;}
 .str_img img{transition: .3s;}
 .str_img img:hover{transform: scale(1.1);}
 
@@ -71,8 +63,6 @@ nav{letter-spacing: 0.7px;}
   object-fit: cover;
   border-radius: 50%;
 }
-
-
 @media (min-width:1024px){
     /*<<---NAVIGATION--->>**/
     nav .fa-bars{display: none;}

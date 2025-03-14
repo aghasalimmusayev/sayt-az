@@ -16,11 +16,12 @@
 <body>
 
     <div class="navigation fixed z-50 w-full">
-        <nav class="px-10 py-4 relative bg-white mx-auto">
-            <div class="parent_div flex justify-between items-center">
+        <nav class="px-10 py-4 relative bg-white mx-auto tracking-[0.7px]">
+            <div class="parent_div flex flex-row justify-between items-center">
                 <a class="logo" href="index.html"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
                 <div
-                    class="links bg-white absolute z-20 lg:static top-0 right-0 p-10 lg:p-0 h-screen w-2/3 hidden lg:flex lg:max-w-[1000px]">
+                    class="links bg-white absolute hidden overflow-y-scroll md:overflow-y-visible z-40 
+                    lg:static top-0 right-0 p-7 lg:p-0 h-fit lg:flex w-[300px]">
                     <i class="fa-solid fa-xmark text-2xl cursor-pointer p-1 absolute top-[18px] right-10"
                         onclick="closeBar()"></i>
                     <ul class="navlinks flex flex-col lg:flex-row my-5 lg:m-0 lg:items-center lg:gap-3">
@@ -48,7 +49,8 @@
                     </ul>
                 </div>
                 <div
-                    class="right_links absolute hidden z-30 lg:static lg:flex lg:items-center top-[280px] right-0 p-10 lg:p-0 w-2/3 md:w-fit">
+                    class="right_links bg-white absolute hidden overflow-y-scroll md:overflow-visible z-30 
+                    lg:static lg:flex lg:items-center top-[300px] right-0 p-10 lg:p-0 md:w-fit w-[300px]">
                     <div class="flex items-center gap-5">
                         <select id="valuta"
                             class="cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
@@ -61,10 +63,10 @@
                                 <i class="fa-solid fa-chevron-down text-xs px-1"></i>
                             </div>
                             <div class="options absolute top-full">
-                                <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="az">
+                                <div class="option cursor-pointer px-3 py-2 border-b-[1px] border-[#c4c2c2]" data-value="az">
                                     <img src="img/Flag_of_Azerbaijan.png" alt="Azerbaijan Flag">
                                 </div>
-                                <div class="option cursor-pointer px-3 py-2 rounded-md" data-value="en">
+                                <div class="option cursor-pointer px-3 py-2 border-b-[1px] border-[#c4c2c2]" data-value="en">
                                     <img src="img/Flag_of_the_United_States.png" alt="USA Flag">
                                 </div>
                             </div>
@@ -74,7 +76,7 @@
                         <button
                             class="teklif_btn text-white font-bold w-full md:w-[200px] rounded-md px-5 py-2 border-none">
                             Qiymət Təklifi Al</button>
-                        <button class="login_btn text-[#732CE3] font-bold w-full md:w-[130px] rounded-md px-5 py-2">
+                        <button class="login_btn text-[#732CE3] font-bold w-full md:w-[130px] rounded-md px-5 py-2 border border-[#732CE3]">
                             Daxil olun</button>
                     </div>
                 </div>
@@ -205,6 +207,71 @@
 
     </main>
 
+    <footer class="py-16 border-t bg-[#FAF4FF]">
+        <div class="container">
+            <div class="footer_content pb-10 flex flex-col gap-6 md:flex-row">
+                <div class="w-full md:w-[60%]">
+                    <a href="index.html">
+                        <img src="img/saytaz.svg" alt="" class="" width="200">
+                    </a>
+                    <p class="text-base md:text-sm text-[#47207E] max-w-[456px] my-10">Sayt.az - Web saytların
+                        hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+                    <div class="mt-4">
+                        <p class="font-bold my-4 text-[#47207E]">Bizi izləyin :</p>
+                        <div class="flex items-center gap-6">
+                            <i
+                                class="fa-brands fa-facebook text-[24px] md:text-[44px] cursor-pointer text-[#A271F2] hover:text-[#844fda]"></i>
+                            <i
+                                class="fa-brands fa-instagram text-2xl md:text-5xl cursor-pointer text-[#A271F2] hover:text-[#844fda]"></i>
+                            <i
+                                class="fa-brands fa-whatsapp text-2xl md:text-5xl cursor-pointer text-[#A271F2] hover:text-[#844fda]"></i>
+                            <i
+                                class="fa-brands fa-linkedin-in text-2xl md:text-5xl cursor-pointer text-[#A271F2] hover:text-[#844fda]"></i>
+                            <i
+                                class="fa-brands fa-youtube text-2xl md:text-5xl cursor-pointer text-[#A271F2] hover:text-[#844fda]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-[500px] flex flex-col md:flex-row gap-10 ">
+                    <div class="flex flex-col gap-3">
+                        <h4 class="mb-0 md:mb-8 text-[#300B60] font-bold text-lg md:text-2xl uppercase">Hostinq & Domen
+                        </h4>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="#domenSearch">Domen</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="#hostingPlan">Veb Hosting</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]" href="">VPS
+                            Hosting</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="">Server</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <h4 class="mb-0 md:mb-8 text-[#300B60] font-bold text-lg md:text-2xl uppercase">Şirkət</h4>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="header_content">Haqqımızda</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="">Əlaqə</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="#blogs">Bloq</a>
+                        <a class="w-fit text-lg font-medium text-[#4A2182] hover:text-[#A271F2]"
+                            href="#sonIsler">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="pt-10 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[#47207E]">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</p>
+                <p class="flex items-center gap-2 text-[#47207E]">
+                    <span class="gap-2 flex md:text-base items-center">
+                        <i class="fa-solid fa-phone"></i> +(99477) 399-78-11</span>
+                    <span class="gap-2 flex md:text-base items-center">
+                        <i class="fa-solid fa-envelope"></i> support@sayt.az</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="data.js"></script>
     <script src="saytCalc.js"></script>
