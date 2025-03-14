@@ -86,6 +86,9 @@ document.querySelector(".fa-xmark").addEventListener("click", function() {
 document.querySelectorAll(".navlinks > li").forEach(function(item){
     item.addEventListener("click", function(event){
         event.stopPropagation(); // Klikin sənədə yayılmasının qarşısını al
+        document.querySelectorAll(".navlinks > li > ul").forEach(function(ul) {
+            ul.style.display = "none";
+        });
         let ulTag = this.querySelector("ul");
         ulTag.style.display = ulTag.style.display == "block" ? "none" : "block"
     })
@@ -246,7 +249,6 @@ function showPortfolio(){
 }
 pagBtns.forEach((pagButton, index) => {
     pagButton.onclick = function() {
-        debugger
         pagBtns.forEach(btn => {
             btn.classList.remove("bg-[#996BE4]", "text-white");
         });
@@ -259,18 +261,14 @@ pagBtns.forEach((pagButton, index) => {
 });
 let currentPage = 1;
 prevButton.onclick = function() {
-    debugger
     if (currentPage > 1) {
         currentPage--;
         pagBtns[currentPage - 1].click();
-        console.log(currentPage);
     }
 };
 nextButton.onclick = function() {
-    debugger
     if (currentPage < pagBtns.length) {
         currentPage++;
         pagBtns[currentPage - 1].click();
-        console.log(currentPage);
     }
 };

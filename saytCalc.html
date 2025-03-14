@@ -21,8 +21,8 @@
                 <a class="logo" href="index.html"><img class="w-[120px]" src="img/saytaz.svg" alt="logo"></a>
                 <div
                     class="links bg-white absolute hidden overflow-y-scroll md:overflow-y-visible z-40 
-                    lg:static top-0 right-0 p-7 lg:p-0 h-fit lg:flex w-[300px]">
-                    <i class="fa-solid fa-xmark text-2xl cursor-pointer p-1 absolute top-[18px] right-10"
+                            lg:static top-0 right-0 p-7 lg:p-0 h-fit lg:flex w-[300px]">
+                    <i class="fa-solid fa-xmark text-2xl cursor-pointer p-1 absolute top-[18px] right-6"
                         onclick="closeBar()"></i>
                     <ul class="navlinks flex flex-col lg:flex-row my-5 lg:m-0 lg:items-center lg:gap-3">
                         <li class="cursor-pointer py-3 text-[#300B60] font-manrope font-bold relative" onclick="">Veb
@@ -53,7 +53,7 @@
                     lg:static lg:flex lg:items-center top-[300px] right-0 p-10 lg:p-0 md:w-fit w-[300px]">
                     <div class="flex items-center gap-5">
                         <select id="valuta"
-                            class="cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
+                            class="bg-white cursor-pointer w-[40px] my-3 lg:m-0 font-bold text-xl text-[#300B60]">
                             <option class="text-[#300B60] font-bold" value="manat">$</option>
                             <option class="text-[#300B60] font-bold" value="dollar">₼</option>
                         </select>
@@ -86,7 +86,6 @@
     </div>
 
     <main>
-
         <div class="container  pt-[120px]">
             <section id="saytCalc" class="bg-[#F5F5F5] py-5 px-3">
                 <div class="flex flex-col gap-5 lg:flex-row justify-between items-start relative">
@@ -204,7 +203,6 @@
                 </div>
             </section>
         </div>
-
     </main>
 
     <footer class="py-16 border-t mt-5 bg-[#FAF4FF]">
@@ -261,12 +259,12 @@
         </div>
         <hr>
         <div class="container">
-            <div class="pt-10 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-[#47207E]">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</p>
+            <div class="pt-10 flex flex-col md:flex-row justify-between items-start md:items-center">
+                <p class="text-[#47207E] mb-3">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</p>
                 <p class="flex items-center gap-2 text-[#47207E]">
-                    <span class="gap-2 flex md:text-base items-center">
+                    <span class="gap-2 flex md:text-base items-center text-nowrap">
                         <i class="fa-solid fa-phone"></i> +(99477) 399-78-11</span>
-                    <span class="gap-2 flex md:text-base items-center">
+                    <span class="gap-2 flex md:text-base items-center text-nowrap">
                         <i class="fa-solid fa-envelope"></i> support@sayt.az</span>
                 </p>
             </div>
