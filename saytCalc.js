@@ -86,6 +86,9 @@ document.querySelector(".fa-xmark").addEventListener("click", function() {
 document.querySelectorAll(".navlinks > li").forEach(function(item){
     item.addEventListener("click", function(event){
         event.stopPropagation(); // Klikin sənədə yayılmasının qarşısını al
+        document.querySelectorAll(".navlinks > li > ul").forEach(function(ul) {
+            ul.style.display = "none";
+        });
         let ulTag = this.querySelector("ul");
         ulTag.style.display = ulTag.style.display == "block" ? "none" : "block"
     })
