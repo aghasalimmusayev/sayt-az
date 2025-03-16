@@ -648,12 +648,12 @@ video {
   right: 0px;
 }
 
-.right-10 {
-  right: 2.5rem;
-}
-
 .right-4 {
   right: 1rem;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .top-0 {
@@ -678,18 +678,6 @@ video {
 
 .top-full {
   top: 100%;
-}
-
-.right-8 {
-  right: 2rem;
-}
-
-.right-7 {
-  right: 1.75rem;
-}
-
-.right-6 {
-  right: 1.5rem;
 }
 
 .z-10 {

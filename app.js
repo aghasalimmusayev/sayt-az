@@ -19,6 +19,7 @@ let isler = document.querySelector(".isler");
 let pagBtns = document.querySelectorAll(".pag_btn")
 let prevButton = document.querySelector("button[title='previous']");
 let nextButton = document.querySelector("button[title='next']");
+let domenInput = document.querySelector("domen_input");
 
 let start = 0
 let son = 6
@@ -83,19 +84,23 @@ document.querySelector(".fa-bars").addEventListener("click", function() {
 document.querySelector(".fa-xmark").addEventListener("click", function() {
     closeBar();
 });
-document.querySelectorAll(".navlinks > li").forEach(function(item){
-    item.addEventListener("click", function(event){
-        event.stopPropagation(); // Klikin sənədə yayılmasının qarşısını al
-        document.querySelectorAll(".navlinks > li > ul").forEach(function(ul) {
-            ul.style.display = "none";
-        });
-        let ulTag = this.querySelector("ul");
-        ulTag.style.display = ulTag.style.display == "block" ? "none" : "block"
-    })
-})
-document.addEventListener("click", function(event) {
-    document.querySelectorAll(".navlinks > li > ul").forEach(function(ul) {
-        if (!ul.contains(event.target)) {
+document.querySelectorAll(".navlinks > li").forEach(function (item) {
+    item.addEventListener("click", function (event) {
+        event.stopPropagation(); // Klikin yayılmasını dayandır
+        const ulTag = this.querySelector("ul");
+        if (ulTag) {
+            const isOpen = ulTag.style.display === "block";
+            document.querySelectorAll(".navlinks > li > ul").forEach(function (ul) {
+                ul.style.display = "none";
+            });
+            ulTag.style.display = isOpen ? "none" : "block";
+        }
+    });
+});
+document.addEventListener("click", function (event) {
+    document.querySelectorAll(".navlinks > li > ul").forEach(function (ul) {
+        const parentLi = ul.parentElement;
+        if (!parentLi.contains(event.target)) {
             ul.style.display = "none";
         }
     });
@@ -202,7 +207,11 @@ function checkDomain(value){
     const validPattern = /^[a-zA-Z0-9-]*$/;
     if (!validPattern.test(value)) {
         domenFillingInfo.innerHTML = "Domen adı düzgün deyil. Domen adında yalnız hərf, rəqəm və '-' işarəsi ola bilər.";
-    } else {
+    }
+    else if(value.length < 3){
+        domenFillingInfo.innerHTML = "Domen adinin uzunlu 3-den az ola bilmez";
+    }
+    else{
         domenFillingInfo.innerHTML = "";
     }
 }
