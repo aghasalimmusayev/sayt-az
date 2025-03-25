@@ -13,6 +13,7 @@ html {scroll-behavior: smooth;}
     height: 15px;
 }
 .teklif_btn{background: linear-gradient(90deg, rgba(121,53,227,1) 49%, rgba(189,164,230,1) 94%);}
+.links, .right_links{transition: .3s;}
 .navlinks li ul{
     border: 1px solid gray;
     top: 35px;
