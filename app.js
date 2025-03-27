@@ -266,6 +266,7 @@ pagBtns.forEach((pagButton, index) => {
         son = Math.min((index + 1) * 6, saytData.portfolio.length);
         currentPage = index + 1;
         showPortfolio();
+        scrollToElement();
     };
 });
 let currentPage = 1;
@@ -281,3 +282,6 @@ nextButton.onclick = function() {
         pagBtns[currentPage - 1].click();
     }
 };
+function scrollToElement() {
+    document.getElementById("sonIsler").scrollIntoView({ behavior: "smooth", block: "start" });
+}
