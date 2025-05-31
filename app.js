@@ -112,7 +112,7 @@ function vebsaytShow(){
                 <a href="#" class="flex items-center">
                     <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="${item.img}" alt="link_img">
                     <div class="li_text">
-                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-3">${item.name}</p>
+                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-5">${item.name}</p>
                         <span class="block text-slate-500 md:text-sm text-xs lg:w-max">${item.name}</span>
                     </div>
                 </a>
@@ -126,7 +126,7 @@ function domenShow(){
                 <a href="#" class="flex items-center">
                     <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="${item.img}" alt="link_img">
                     <div class="li_text">
-                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-3">${item.name}</p>
+                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-5">${item.name}</p>
                         <span class="block text-slate-500 md:text-sm text-xs lg:w-max">${item.name}</span>
                     </div>
                 </a>
@@ -140,7 +140,7 @@ function hostingShow(){
                 <a href="#" class="flex items-center">
                     <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="${item.img}" alt="link_img">
                     <div class="li_text">
-                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-3">${item.name}</p>
+                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-5">${item.name}</p>
                         <span class="block text-slate-500 md:text-sm text-xs lg:w-max">${item.name}</span>
                     </div>
                 </a>
@@ -155,7 +155,7 @@ function xidmetShow(){
                 <a href="${hrefValue}" class="flex items-center">
                     <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="${item.img}" alt="link_img">
                     <div class="li_text">
-                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-3">${item.name}</p>
+                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-5">${item.name}</p>
                         <span class="block text-slate-500 md:text-sm text-xs lg:w-max">${item.name}</span>
                     </div>
                 </a>
@@ -169,7 +169,7 @@ function sirketShow(){
                 <a href="#" class="flex items-center">
                     <img class="mr-4 p-3 bg-blue-100 w-12 h-12 rounded-lg" src="${item.img}" alt="link_img">
                     <div class="li_text">
-                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-3">${item.name}</p>
+                        <p class="block text-slate-700 font-medium text-base sm:w-full lg:w-max lg:pr-5">${item.name}</p>
                         <span class="block text-slate-500 md:text-sm text-xs lg:w-max">${item.name}</span>
                     </div>
                 </a>
