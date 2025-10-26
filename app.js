@@ -23,7 +23,7 @@ let domenInput = document.querySelector("domen_input");
 
 let start = 0
 let son = 6
-pagBtns[0].classList.add("bg-[#996BE4]", "text-white");
+pagBtns[0].classList.add("bg-[#996BE4]", "text-[#A271F2]");
 
 vebsaytShow();
 domenShow();
@@ -259,9 +259,9 @@ function showPortfolio(){
 pagBtns.forEach((pagButton, index) => {
     pagButton.onclick = function() {
         pagBtns.forEach(btn => {
-            btn.classList.remove("bg-[#996BE4]", "text-white");
+            btn.classList.remove("bg-[#996BE4]", "text-[#A271F2]");
         });
-        this.classList.add("bg-[#996BE4]", "text-white");
+        this.classList.add("bg-[#996BE4]", "text-[#A271F2]");
         start = index * 6;
         son = Math.min((index + 1) * 6, saytData.portfolio.length);
         currentPage = index + 1;
